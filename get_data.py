@@ -11,7 +11,6 @@ def get_file(verbose=False):
     return df
 
 def clean_data(df):
-    df = get_file()
     df.columns = df.columns.str.strip().str.replace(' ', '_').str.replace('/','_').str.lower()
     df.drop(columns='year',inplace=True)
     df.drop(columns='country',inplace=True)
